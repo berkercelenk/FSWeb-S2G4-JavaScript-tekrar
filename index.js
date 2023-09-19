@@ -29,10 +29,12 @@ function KareninAlani(kenaruzunlugu){
 			4. Hesaplanan çemberin çevresi döndürülecektir.
 		*/
 
-function CemberinCevresi(/* kodlar buraya */){
-	/* kodlar buraya */
+function CemberinCevresi(yaricap){
+	let sonuc = pi*yaricap;
+	return sonuc
 }
 
+//console.log(CemberinCevresi(2))
 
 /* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
@@ -47,10 +49,11 @@ function CemberinCevresi(/* kodlar buraya */){
 			4. Hesaplanan çemberin alanı döndürülecektir.
 		*/
 		
-function CemberinAlani(/* kodlar buraya */){
-	/* kodlar buraya */
+function CemberinAlani(yaricap, pi){
+	let sonuc = pi* Math.row (yaricap,2)
+	return sonuc
 }
-
+//console.log(CemberinAlani(2))
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
@@ -79,11 +82,25 @@ function CemberinAlani(/* kodlar buraya */){
 
 	/* kodlar buraya */
 	
-	
+	enbuyuk = [0]
+	enkucuk= [0]
+	for ( let i = 0; i<sayilar.length; i++) {
+		if ( sayilar[i] > enbuyuk) {
+			enbuyuk=sayilar[i]
+		}
+		if (sayilar[i]<enkucuk) {
+			enkucuk=sayilar[i]
+		}}
 	
 	// 3b çözümü:
 
+	ucetambolunenler=[]
 	/* kodlar buraya */
+		sayilar.forEach((sayi)=>{
+			if(sayi%3==0){
+				ucetambolunenler.push(sayi)
+			}
+		})
 		
 		
 		
@@ -106,8 +123,23 @@ function CemberinAlani(/* kodlar buraya */){
 	
 	//3f çözümü
 	
-	/* kodlar buraya */
+	let depo = {};
 
+for (let sayi of sayilar) {
+  if (depo[sayi] == undefined) {
+    depo[sayi] = 1;
+  } else {
+    depo[sayi]++ ;
+  }
+}
+console.log(depo)
+ tekraredensayilar = []
+for(let key in depo){
+	if(depo[key]>1){
+		let metin = `${key} sayısı ${depo[key]} kere tekrar edilmiştir`
+		tekraredensayilar.push(metin)
+	}
+}
 
 
 
